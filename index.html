@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/south-street/jquery-ui.css"/>
+      <style>
+        .toggler { width: 500px; height: 200px; position: relative; }
+        #button { padding: .5em 1em; text-decoration: none; }
+        #effect { width: 240px; height: 135px; padding: 0.4em; position: relative; }
+        #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+        .ui-effects-transfer { border: 2px dotted gray; }
+      </style>
+      <script>
+      $(function(){
+        $( "#button" ).click(function() {
+          $(this).effect("transfer", options = {to: "#effect", className: "ui-effects-transfer" }, 500, function(){} );
+        });
+      });
+      </script>
+  </head>
+  <body>
+    <div class="demo">
+    <div class="toggler">
+      <div id="effect" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Effect</h3>
+        <p>
+          Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing ut, luctus sed, hendrerit vitae, mi.
+        </p>
+      </div>
+    </div>
+    <a href="#" id="button" class="ui-state-default ui-corner-all">Run Effect</a>
+    </div>
+  </body>
+</html>
