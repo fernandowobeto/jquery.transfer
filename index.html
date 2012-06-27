@@ -17,6 +17,14 @@
         $( "#button" ).click(function() {
           $(this).effect("transfer", options = {to: "#effect", className: "ui-effects-transfer" }, 500, function(){} );
         });
+
+        $('#relacao_portal ul li').click(function(){
+          var elemento = $(this);
+          var index = elemento.index();
+          var $destino = $('#relacao_unico ul li:eq('+index+')');
+          elemento.effect("transfer", options = {to: $destino, className: "ui-effects-transfer" }, 500, function(){ $destino.text(elemento.text());} );
+        });
+
       });
       </script>
   </head>
@@ -31,6 +39,26 @@
       </div>
     </div>
     <a href="#" id="button" class="ui-state-default ui-corner-all">Run Effect</a>
+    </div>
+    <div>
+      <div id="relacao_portal" style="float:left;width:500px;">
+        <ul>
+          <li>Fernando</li>
+          <li>Emerson</li>
+          <li>Gregori</li>
+          <li>Pedro</li>
+          <li>Daniel</li>
+        </ul>
+      </div>
+      <div id="relacao_unico" style="float:left;width:500px;">
+        <ul>
+          <li>Wobeto</li>
+          <li>Engroff</li>
+          <li>Maus</li>
+          <li>Cavalheiro</li>
+          <li>Borba Cana</li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
